@@ -1,1 +1,17 @@
+Priority Scheduling:
+ Assume a priority is associated with each process.
+ Assume all processes arrive at the same time.
+ Select highest priority process from the ready queue.
+ SJF is a special case of priority scheduling.
+ Equal-priority processes are scheduled in FCFS order.
+ Priorities can be defined internally
+ Memory requirements, number of open files, burst times
+ Priorities can be defined externally
+ Preemptive or Non-preemptive
 
+Implementation:
+	
+	1.First input the processes with their burst time and priority.
+	2.Sort the processes,burst time and priority according to the priority.
+	3.Now, apply FCFS on the processes.
+	4.Calculate average waiting time and turn around time.
