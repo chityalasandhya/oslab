@@ -1,1 +1,31 @@
+Round Robin:
+ Similar to FCFS, but preemption to switch between processes
+ Time quantum(time slice) is a small unit of time (10 to 100 ms)
+ Process is executed on the CPU for at most one-time quantum
+ Implemented by using the ready queue as a circular queue
+ Head process gets the CPU
+ Uses less than a time quantum implies gives up the CPU voluntary
+ Uses full time quantum implies timer will cause an interrupt
+ Context switch will be executed
+ Process will be put at the tail of queue
+ Preemptive
+
+
+	Implementation:
+	
+	1.Create an array temp[] to keep track of remaining burst time of processes.
+	2.Create another array wt[] to store waiting times of processes.Initialize this array as 0.
+	3.Initialize time t=0.
+	4.Keep traversing all the processes while all processes are not done.Do following (i)th process if it is not done yet.
+	      a-If temp[i]>quantum
+	          t=t+quantum
+	          temp[i]-=quantum
+	      b-Else
+	          t=t+temp[i]
+	          wt[i]=t-bt[i]
+	          t[i]=0
+	5.Once we calculate waiting times,we can compute tat[i] as wt[i]+bt[i].
+	6.calculate average waiting and turn around time of given processes.
+
+
 
