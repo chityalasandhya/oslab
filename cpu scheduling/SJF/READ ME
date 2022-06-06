@@ -1,1 +1,19 @@
+Short job first:
+ Solution to the Convoy Effect problem.
+ Assume the next burst time of each process is known
+ SJF selects process which has the shortest burst time
+ Optimal algorithm because it has the shortest average waiting time
+ Equal burst time processes are scheduled in FCFS order
+ Impossible to know in advance
+ OS knows the past burst times- make a prediction using an average
+ Non-preemptive Or preemptive
+
+Implementation : 
+	
+	1.Input the processes along with their burst time.
+	2.Sort the processes according to their burst time.
+	3.Find waiting time for all processes as Waiting time (Wt) = TAT - BT
+	4.Find turn around time for all processes as Turan Around Time (tat) = wt + Bt
+	5.Calculate average waiting time and average turn around time.
+
 
